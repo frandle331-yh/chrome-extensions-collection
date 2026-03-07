@@ -11,8 +11,18 @@ const FREE_LIMITS = {
   importExport: false,
 };
 
-// Pro status (will be managed by ExtensionPay when configured)
+// Pro status (managed by ExtensionPay)
 let isPro = false;
+
+async function checkProStatus() {
+  try {
+    const extpay = ExtPay('envswitch');
+    const user = await extpay.getUser();
+    isPro = user.paid;
+  } catch {
+    isPro = false;
+  }
+}
 
 let data = { projects: [], activeEnvByProject: {} };
 let editingProject = null;
@@ -344,5 +354,11 @@ function esc(str) {
   return div.innerHTML;
 }
 
+// Upgrade button
+document.getElementById("upgrade-btn").addEventListener("click", () => {
+  const extpay = ExtPay('envswitch');
+  extpay.openPaymentPage();
+});
+
 // Init
-loadData().then(renderProjects);
+checkProStatus().then(() => loadData()).then(renderProjects);

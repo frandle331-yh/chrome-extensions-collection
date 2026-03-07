@@ -8,6 +8,16 @@ const FREE_LIMITS = {
 };
 let isPro = false;
 
+async function checkProStatus() {
+  try {
+    const extpay = ExtPay('snapdiff');
+    const user = await extpay.getUser();
+    isPro = user.paid;
+  } catch {
+    isPro = false;
+  }
+}
+
 async function loadSnapshots() {
   const result = await chrome.storage.local.get("snapdiff");
   snapshots = (result.snapdiff || {}).snapshots || [];
@@ -283,5 +293,11 @@ function esc(str) {
   return div.innerHTML;
 }
 
+// Upgrade button
+document.getElementById("upgrade-btn").addEventListener("click", () => {
+  const extpay = ExtPay('snapdiff');
+  extpay.openPaymentPage();
+});
+
 // Init
-loadSnapshots().then(renderSnapshots);
+checkProStatus().then(() => loadSnapshots()).then(renderSnapshots);

@@ -3,3 +3,27 @@ node_modules/
 *.log
 .DS_Store
 Thumbs.db
+
+# Internal collaboration (multi-agent)
+.collab/
+collab.sh
+CLAUDE.md
+
+# Store & monetization strategy
+chrome-extensions/store-listings/revenue-strategy.md
+chrome-extensions/store-listings/screenshots/
+chrome-extensions/store-listings/*.txt
+
+# Paid extension build scripts
+chrome-extensions/*-paid.py
+chrome-extensions/setup-icons-paid.py
+chrome-extensions/create-zips-paid.py
+
+# Extension packages
+chrome-extensions/zips/
+
+# ExtensionPay payment library
+chrome-extensions/*/ExtPay.js
+
+# Claude worktrees
+.claude/

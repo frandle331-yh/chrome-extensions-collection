@@ -1,6 +1,10 @@
 // EnvSwitch Background Service Worker
 // Manages environment switching, URL rewriting, and header injection
 
+importScripts('ExtPay.js');
+const extpay = ExtPay('envswitch');
+extpay.startBackground();
+
 const DEFAULT_DATA = {
   projects: [],
   activeEnvByProject: {},
