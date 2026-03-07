@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "SelectTools - Text Utilities on Right-Click",
+  "version": "1.0.0",
+  "description": "Right-click selected text to instantly count characters, convert case, encode/decode Base64 & URL, generate hashes, and more.",
+  "permissions": ["contextMenus", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SelectTools"
+  },
+  "icons": {}
+}

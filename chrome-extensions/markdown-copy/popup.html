@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { width: 320px; font-family: system-ui, -apple-system, sans-serif; padding: 16px; background: #fff; color: #0f172a; }
+    h1 { font-size: 16px; font-weight: 700; color: #2563eb; margin-bottom: 8px; }
+    p { font-size: 13px; color: #64748b; line-height: 1.5; margin-bottom: 12px; }
+    .how { background: #f1f5f9; border-radius: 8px; padding: 12px; font-size: 12px; color: #334155; line-height: 1.6; }
+    .how strong { color: #0f172a; }
+    .step { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 6px; }
+    .num { background: #2563eb; color: #fff; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; flex-shrink: 0; }
+    .features { margin-top: 12px; font-size: 12px; color: #64748b; }
+    .features span { display: inline-block; background: #eff6ff; color: #2563eb; padding: 2px 8px; border-radius: 4px; margin: 2px; font-size: 11px; }
+  </style>
+</head>
+<body>
+  <h1>MarkdownCopy</h1>
+  <p>Webページのテキストを選択して、Markdown形式でコピーできます。</p>
+  <div class="how">
+    <div class="step"><div class="num">1</div><div>ページ上のテキストを<strong>選択</strong></div></div>
+    <div class="step"><div class="num">2</div><div><strong>右クリック</strong> → 「Copy as Markdown」</div></div>
+    <div class="step"><div class="num">3</div><div>Markdownがクリップボードに<strong>コピー</strong>されます</div></div>
+  </div>
+  <div class="features">
+    対応フォーマット:
+    <span>見出し</span><span>太字/斜体</span><span>リンク</span><span>リスト</span><span>コード</span><span>テーブル</span><span>画像</span><span>引用</span>
+  </div>
+</body>
+</html>
