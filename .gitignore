@@ -13,6 +13,7 @@ CLAUDE.md
 chrome-extensions/store-listings/revenue-strategy.md
 chrome-extensions/store-listings/screenshots/
 chrome-extensions/store-listings/*.txt
+chrome-extensions/store-listings/articles/
 
 # Paid extension build scripts
 chrome-extensions/*-paid.py

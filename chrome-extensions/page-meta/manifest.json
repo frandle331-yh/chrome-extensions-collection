@@ -3,7 +3,7 @@
   "name": "PageMeta - OGP & Meta Tag Viewer",
   "version": "1.0.0",
   "description": "Instantly view OGP, meta tags, headings, and page info for any webpage. Essential for SEO and web development.",
-  "permissions": ["activeTab"],
+  "permissions": ["activeTab", "scripting"],
   "action": {
     "default_popup": "popup.html",
     "default_title": "PageMeta"
