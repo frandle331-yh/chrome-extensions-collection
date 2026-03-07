@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "SnapDiff - Visual Regression Checker",
+  "version": "1.0.0",
+  "description": "Capture page screenshots, compare them later to spot visual changes. Pixel-level diff with highlighting. No cloud, no CI - just works.",
+  "permissions": ["activeTab", "storage", "tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SnapDiff"
+  },
+  "icons": {}
+}

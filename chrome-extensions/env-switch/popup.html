@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Main View -->
+  <div id="main-view">
+    <div class="header">
+      <h1>EnvSwitch</h1>
+      <div class="header-actions">
+        <button id="add-project" title="New Project">+</button>
+        <button id="import-btn" title="Import">&#8613;</button>
+        <button id="export-btn" title="Export">&#8615;</button>
+      </div>
+    </div>
+    <div id="projects"></div>
+    <div id="empty" class="empty-state">
+      <p>No projects yet</p>
+      <button id="add-first">Create Your First Project</button>
+    </div>
+  </div>
+
+  <!-- Project Editor -->
+  <div id="editor-view" style="display:none">
+    <div class="header">
+      <button id="editor-back" class="back-btn">&larr;</button>
+      <input type="text" id="project-name" placeholder="Project Name" class="title-input">
+      <button id="save-project" class="save-btn">Save</button>
+    </div>
+    <div class="editor-section">
+      <label>URL Pattern (for header matching)</label>
+      <input type="text" id="url-pattern" placeholder="e.g. *://example.com/*" class="field-input">
+    </div>
+    <div class="editor-section">
+      <div class="section-header">
+        <span>Environments</span>
+        <button id="add-env" class="small-btn">+ Add</button>
+      </div>
+      <div id="env-list"></div>
+    </div>
+    <div class="editor-footer">
+      <button id="delete-project" class="danger-btn">Delete Project</button>
+    </div>
+  </div>
+
+  <!-- Environment Editor -->
+  <div id="env-editor-view" style="display:none">
+    <div class="header">
+      <button id="env-back" class="back-btn">&larr;</button>
+      <input type="text" id="env-name" placeholder="Environment Name" class="title-input">
+      <button id="save-env" class="save-btn">Save</button>
+    </div>
+    <div class="editor-section">
+      <label>Base URL</label>
+      <input type="text" id="env-base-url" placeholder="https://staging.example.com" class="field-input">
+    </div>
+    <div class="editor-section">
+      <label>Color</label>
+      <div class="color-picker" id="env-colors"></div>
+    </div>
+    <div class="editor-section">
+      <div class="section-header">
+        <span>Custom Headers</span>
+        <button id="add-header" class="small-btn">+ Add</button>
+      </div>
+      <div id="header-list"></div>
+    </div>
+    <div class="editor-footer">
+      <button id="delete-env" class="danger-btn">Delete Environment</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

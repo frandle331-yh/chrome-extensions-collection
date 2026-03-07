@@ -1,0 +1,67 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 380px; max-height: 520px; font-family: system-ui, -apple-system, sans-serif; font-size: 13px; color: #0f172a; background: #fff; overflow-y: auto; }
+
+/* Header */
+.header { display: flex; align-items: center; gap: 8px; padding: 10px 14px; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; background: #fff; z-index: 10; }
+.header h1 { font-size: 15px; font-weight: 700; color: #8b5cf6; flex: 1; }
+.header-actions { display: flex; gap: 4px; }
+.header-actions button, .header button { background: none; border: 1px solid #e2e8f0; border-radius: 5px; padding: 3px 8px; cursor: pointer; font-size: 14px; color: #64748b; }
+.header-actions button:hover, .header button:hover { background: #f1f5f9; }
+.back-btn { font-size: 16px !important; }
+.title-input { flex: 1; border: none; outline: none; font-size: 14px; font-weight: 600; background: none; color: #0f172a; }
+.save-btn { background: #8b5cf6 !important; color: #fff !important; border: none !important; font-size: 12px !important; font-weight: 600; padding: 5px 12px !important; border-radius: 5px; }
+.save-btn:hover { background: #7c3aed !important; }
+
+/* Empty State */
+.empty-state { padding: 40px 20px; text-align: center; color: #94a3b8; }
+.empty-state p { margin-bottom: 12px; }
+.empty-state button { background: #8b5cf6; color: #fff; border: none; padding: 8px 16px; border-radius: 6px; font-size: 13px; cursor: pointer; font-weight: 600; }
+
+/* Project Card */
+.project-card { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; }
+.project-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.project-name { font-weight: 700; font-size: 13px; cursor: pointer; }
+.project-name:hover { color: #8b5cf6; }
+.edit-btn { background: none; border: none; color: #94a3b8; cursor: pointer; font-size: 12px; }
+.edit-btn:hover { color: #8b5cf6; }
+
+.env-buttons { display: flex; gap: 4px; flex-wrap: wrap; }
+.env-btn { padding: 5px 12px; border: 2px solid #e2e8f0; border-radius: 6px; font-size: 11px; font-weight: 600; cursor: pointer; background: #fff; color: #64748b; transition: all 0.15s; }
+.env-btn:hover { border-color: currentColor; }
+.env-btn.active { color: #fff; border-color: transparent; }
+
+/* Editor */
+.editor-section { padding: 10px 14px; border-bottom: 1px solid #f1f5f9; }
+.editor-section label { display: block; font-size: 11px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 4px; }
+.field-input { width: 100%; border: 1px solid #e2e8f0; border-radius: 5px; padding: 7px 10px; font-size: 12px; outline: none; font-family: "SF Mono", Consolas, monospace; }
+.field-input:focus { border-color: #8b5cf6; }
+.section-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+.section-header span { font-size: 11px; font-weight: 600; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.3px; }
+.small-btn { background: #f1f5f9; border: none; padding: 3px 8px; border-radius: 4px; font-size: 11px; color: #64748b; cursor: pointer; font-weight: 600; }
+.small-btn:hover { background: #e2e8f0; }
+
+/* Environment list in project editor */
+.env-item { display: flex; align-items: center; gap: 8px; padding: 6px 8px; border: 1px solid #e2e8f0; border-radius: 5px; margin-bottom: 4px; cursor: pointer; }
+.env-item:hover { background: #f8fafc; }
+.env-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.env-item-name { flex: 1; font-size: 12px; font-weight: 600; }
+.env-item-url { font-size: 10px; color: #94a3b8; font-family: "SF Mono", Consolas, monospace; }
+
+/* Header rows in env editor */
+.header-row { display: flex; gap: 4px; margin-bottom: 4px; align-items: center; }
+.header-row input { flex: 1; border: 1px solid #e2e8f0; border-radius: 4px; padding: 5px 8px; font-size: 11px; font-family: "SF Mono", Consolas, monospace; outline: none; }
+.header-row input:focus { border-color: #8b5cf6; }
+.remove-btn { background: none; border: none; color: #ef4444; cursor: pointer; font-size: 14px; padding: 0 4px; }
+
+/* Color picker */
+.color-picker { display: flex; gap: 6px; flex-wrap: wrap; }
+.color-option { width: 28px; height: 28px; border-radius: 50%; cursor: pointer; border: 3px solid transparent; transition: border-color 0.15s; }
+.color-option:hover, .color-option.selected { border-color: #0f172a; }
+
+/* Footer */
+.editor-footer { padding: 14px; }
+.danger-btn { background: none; border: 1px solid #fecaca; color: #ef4444; padding: 6px 14px; border-radius: 5px; font-size: 12px; cursor: pointer; width: 100%; }
+.danger-btn:hover { background: #fef2f2; }
+
+/* Toast */
+.toast { position: fixed; bottom: 12px; left: 50%; transform: translateX(-50%); background: #8b5cf6; color: #fff; padding: 6px 16px; border-radius: 6px; font-size: 12px; z-index: 100; }

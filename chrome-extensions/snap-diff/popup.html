@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Main View -->
+  <div id="main-view">
+    <div class="header">
+      <h1>SnapDiff</h1>
+      <button id="capture" class="capture-btn">&#128247; Capture</button>
+    </div>
+    <div id="snapshots"></div>
+    <div id="empty" class="empty-state">
+      <p>No snapshots yet</p>
+      <p class="sub">Capture a baseline screenshot of any page, then compare it later to spot visual changes.</p>
+    </div>
+  </div>
+
+  <!-- Compare View -->
+  <div id="compare-view" style="display:none">
+    <div class="header">
+      <button id="compare-back" class="back-btn">&larr;</button>
+      <span class="header-title">Compare</span>
+      <select id="compare-mode">
+        <option value="diff">Diff Overlay</option>
+        <option value="side">Side by Side</option>
+        <option value="slider">Slider</option>
+      </select>
+    </div>
+    <div id="diff-stats" class="diff-stats"></div>
+    <div id="compare-container" class="compare-container"></div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
