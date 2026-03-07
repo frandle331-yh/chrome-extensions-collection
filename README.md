@@ -8,41 +8,51 @@ Available on the [Chrome Web Store](https://chromewebstore.google.com/).
 
 ---
 
-## Projects / プロジェクト
+## Extensions / 拡張機能一覧
 
-### [chrome-extensions/](./chrome-extensions/)
-
-10 Chrome extensions (8 free + 2 premium) for web development, design, and productivity.
-
-Web開発・デザイン・生産性向上のためのChrome拡張機能10個（無料8 + プレミアム2）。
+### Free / 無料
 
 | Extension | Category | Description |
 |-----------|----------|-------------|
-| **MarkdownCopy** | Productivity | Copy web content as clean Markdown |
-| **PageMeta** | SEO / Dev | Inspect OGP, meta tags, heading structure |
-| **SelectTools** | Dev / Text | Right-click text conversion & analysis |
-| **JSONView** | Dev / API | Auto-format JSON with syntax highlighting |
-| **QuickNote** | Productivity | URL-attached notes with auto-save |
-| **RegexPlayground** | Dev | Live regex tester with cheat sheet |
-| **ColorPeek** | Design | Extract page color palette |
-| **ResponsePeek** | Dev / Security | HTTP header viewer with security scoring |
-| **EnvSwitch** ⭐ | Dev / DevOps | Environment switcher with URL rewriting |
-| **SnapDiff** ⭐ | QA / Testing | Visual regression checker with pixel diff |
+| **MarkdownCopy** | Productivity | Copy web content as clean Markdown / Webページをマークダウン形式でコピー |
+| **PageMeta** | SEO / Dev | Inspect OGP, meta tags, heading structure / メタ情報をワンクリックで確認 |
+| **SelectTools** | Dev / Text | Right-click text conversion & analysis / 右クリックでテキスト変換・解析 |
+| **JSONView** | Dev / API | Auto-format JSON with syntax highlighting / JSONを自動整形・ハイライト |
+| **QuickNote** | Productivity | URL-attached notes with auto-save / URLに紐付くメモ、自動保存 |
+| **RegexPlayground** | Dev | Live regex tester with cheat sheet / リアルタイム正規表現テスター |
+| **ColorPeek** | Design | Extract page color palette / ページのカラーパレット抽出 |
+| **ResponsePeek** | Dev / Security | HTTP header viewer with security scoring / HTTPヘッダー確認・セキュリティ診断 |
 
-⭐ = Premium
+### Premium / プレミアム ⭐
 
-### [devtoolbox/](./devtoolbox/)
+| Extension | Category | Description |
+|-----------|----------|-------------|
+| **EnvSwitch** | Dev / DevOps | Environment switcher with URL rewriting / 環境切り替え・URLリライト |
+| **SnapDiff** | QA / Testing | Visual regression checker with pixel diff / ビジュアル差分検出 |
 
-A developer tools website built with Next.js. Provides online utilities like JSON formatter, Base64 encoder, hash generator, and more.
+---
 
-Next.js製の開発者向けツールサイト。JSONフォーマッター、Base64エンコーダー、ハッシュ生成など。
+## Installation / インストール
+
+### From Chrome Web Store / ストアから
+
+Visit each extension's page on the [Chrome Web Store](https://chromewebstore.google.com/) and click "Add to Chrome".
+
+[Chrome Web Store](https://chromewebstore.google.com/) で各拡張機能のページにアクセスし「Chromeに追加」をクリック。
+
+### For Development / 開発用
+
+1. Open `chrome://extensions` in Chrome / Chromeで `chrome://extensions` を開く
+2. Enable **Developer mode** / 「デベロッパーモード」を有効化
+3. Click **Load unpacked** and select an extension folder / 「パッケージ化されていない拡張機能を読み込む」で選択
 
 ---
 
 ## Tech Stack / 技術スタック
 
-- **Chrome Extensions**: Manifest V3, Vanilla JavaScript, Chrome APIs
-- **DevToolBox**: Next.js, TypeScript, Tailwind CSS
+- **Manifest V3** — latest Chrome extension standard / Chrome拡張の最新仕様
+- **Vanilla JavaScript** — no frameworks, lightweight and fast / フレームワーク不使用で軽量
+- **Chrome APIs** — contextMenus, activeTab, scripting, tabs, storage, declarativeNetRequest
 
 ---
 

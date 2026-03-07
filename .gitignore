@@ -25,5 +25,8 @@ chrome-extensions/zips/
 # ExtensionPay payment library
 chrome-extensions/*/ExtPay.js
 
+# DevToolBox (separate project)
+devtoolbox/
+
 # Claude worktrees
 .claude/
