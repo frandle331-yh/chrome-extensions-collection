@@ -1,0 +1,33 @@
+Markdown Copy - Copy as Markdown
+
+選択したWebコンテンツをクリーンなMarkdownとしてコピー。Obsidian・Notion・GitHubユーザー必携。
+
+【主な機能】
+• 選択範囲を右クリック→Markdownでコピー
+• 見出し・リスト・リンク・画像を正確に変換
+• テーブルもMarkdown形式で保持
+• コードブロックも対応
+
+【こんな方におすすめ】
+• Obsidianユーザー — Web情報をノートに素早く取り込み
+• Notionユーザー — Webページの内容をきれいにペースト
+• GitHubユーザー — IssueやREADMEの素材収集
+• ブロガー — 参考資料のクリッピング
+
+---
+
+Markdown Copy - Copy as Markdown
+
+Copy selected webpage content as clean Markdown. Built for Obsidian, Notion, and GitHub users.
+
+Features:
+• Right-click to copy selection as Markdown
+• Accurately converts headings, lists, links, and images
+• Preserves tables in Markdown format
+• Supports code blocks
+
+Perfect for:
+• Obsidian users — quickly import web content into your notes
+• Notion users — paste clean formatted content
+• GitHub users — gather material for issues and READMEs
+• Bloggers — clip reference material effortlessly

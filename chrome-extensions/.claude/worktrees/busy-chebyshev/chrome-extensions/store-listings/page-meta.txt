@@ -1,0 +1,33 @@
+Page Meta - OGP & Meta Tag Viewer
+
+OGP・メタタグ・見出し構造をワンクリックで確認。SEO・Web開発の必須ツール。
+
+【主な機能】
+• OGP（Open Graph Protocol）タグを一覧表示
+• title / description / canonical などのメタ情報を確認
+• 見出し構造（H1〜H6）の階層表示
+• ページ情報の概要表示
+
+【こんな方におすすめ】
+• SEO担当者 — メタタグの設定確認
+• Webマーケター — OGP設定のチェック（SNSシェア時の表示確認）
+• フロントエンド開発者 — 見出し構造の検証
+• コンテンツ制作者 — ページ情報の確認
+
+---
+
+Page Meta - OGP & Meta Tag Viewer
+
+Instantly view OGP tags, meta information, and heading structure for any webpage. Essential for SEO and web development.
+
+Features:
+• View all Open Graph Protocol (OGP) tags at a glance
+• Check title, description, canonical, and other meta tags
+• Visualize heading hierarchy (H1-H6)
+• Quick page information overview
+
+Perfect for:
+• SEO specialists — verify meta tag configurations
+• Web marketers — check OGP settings for social sharing
+• Frontend developers — validate heading structure
+• Content creators — review page information

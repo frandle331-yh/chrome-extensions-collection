@@ -1,0 +1,35 @@
+Color Peek - Webpage Color Extractor
+
+Webページで使われている全カラーを一瞬で抽出。デザイナー・開発者の必須ツール。
+
+【主な機能】
+• ページ内の全カラーをワンクリックで抽出
+• HEX / RGB / HSL の3形式で表示
+• カラーコードをクリックでコピー
+• 完全なカラーパレットを取得
+
+【こんな方におすすめ】
+• Webデザイナー — 参考サイトの配色を素早く確認
+• フロントエンド開発者 — CSSカラーの確認・取得
+• UI/UXデザイナー — カラーパレットの分析
+
+軽量・高速。必要な権限は最小限です。
+
+---
+
+Color Peek - Webpage Color Extractor
+
+Extract every color from any webpage in one click. An essential tool for designers and developers.
+
+Features:
+• Extract all colors from any webpage with one click
+• View colors in HEX, RGB, and HSL formats
+• Click to copy any color code instantly
+• Get the complete color palette of any site
+
+Perfect for:
+• Web designers — quickly analyze color schemes of reference sites
+• Frontend developers — grab CSS colors effortlessly
+• UI/UX designers — study and replicate color palettes
+
+Lightweight and fast. Minimal permissions required.

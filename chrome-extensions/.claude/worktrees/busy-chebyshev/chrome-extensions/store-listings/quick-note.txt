@@ -1,0 +1,33 @@
+Quick Note - Page-Linked Notes
+
+Webページに紐づくメモをサッと記録。再訪問時に自動で復元。
+
+【主な機能】
+• 現在のページに紐づいたメモを即座に作成
+• メモは自動保存、ページ再訪問時に自動表示
+• シンプルで直感的なUI
+• ローカル保存でプライバシー安心
+
+【こんな方におすすめ】
+• リサーチャー — Webページごとにメモを残す
+• 開発者 — 参考ドキュメントにコメントを付ける
+• 学生 — オンライン教材にノートを追加
+• ブックマーク代わりに — メモ付きで記録
+
+---
+
+Quick Note - Page-Linked Notes
+
+Take quick notes linked to any webpage. Notes are automatically saved and restored when you revisit the page.
+
+Features:
+• Create notes instantly linked to the current page
+• Auto-save with automatic restoration on revisit
+• Simple and intuitive interface
+• Local storage for privacy — your notes stay on your device
+
+Perfect for:
+• Researchers — leave notes on any webpage
+• Developers — annotate reference documentation
+• Students — add notes to online learning materials
+• As smart bookmarks — save pages with context

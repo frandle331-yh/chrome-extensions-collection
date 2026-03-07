@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Select Tools - Screenshot</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1280px; height: 800px; background: #f0f4f8; display: flex; align-items: center; justify-content: center; font-family: system-ui, -apple-system, sans-serif; }
+.container { display: flex; gap: 48px; align-items: center; }
+.popup-frame { background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.15); width: 340px; padding: 20px; }
+.popup-frame h1 { font-size: 18px; color: #2563eb; margin-bottom: 8px; }
+.popup-frame > p { font-size: 13px; color: #334155; margin-bottom: 16px; line-height: 1.5; }
+.how { background: #f1f5f9; border-radius: 8px; padding: 14px; margin-bottom: 16px; }
+.step { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; font-size: 13px; color: #334155; }
+.step:last-child { margin-bottom: 0; }
+.num { width: 22px; height: 22px; background: #2563eb; color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-shrink: 0; }
+.features { font-size: 12px; color: #64748b; }
+.features span { display: inline-block; background: #eff6ff; color: #2563eb; border-radius: 99px; padding: 3px 10px; margin: 3px 2px; font-size: 11px; }
+.demo-area { width: 520px; }
+.demo-area h2 { font-size: 22px; color: #1e293b; margin-bottom: 16px; font-weight: 600; }
+.demo-webpage { background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.08); padding: 24px; position: relative; font-size: 14px; color: #334155; line-height: 1.8; }
+.selected { background: #bfdbfe; border-radius: 3px; padding: 1px 2px; }
+.context-menu { position: absolute; right: 20px; top: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); padding: 4px 0; width: 220px; font-size: 13px; z-index: 10; }
+.context-menu .item { padding: 6px 14px; color: #334155; }
+.context-menu .submenu-label { padding: 6px 14px; color: #334155; display: flex; justify-content: space-between; }
+.context-menu .sep { border-top: 1px solid #e2e8f0; margin: 4px 0; }
+.submenu { position: absolute; left: 215px; top: 20px; background: #fff; border-radius: 8px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); padding: 4px 0; width: 180px; font-size: 13px; }
+.submenu .item { padding: 6px 14px; color: #334155; }
+.submenu .item.highlight { background: #2563eb; color: #fff; }
+.submenu .sep { border-top: 1px solid #e2e8f0; margin: 4px 0; }
+.result-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
+.result-card { background: #fff; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 12px; }
+.result-card .label { font-size: 10px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+.result-card .value { font-family: "SF Mono", Consolas, monospace; font-size: 12px; color: #0f172a; word-break: break-all; }
+.result-card .value.blue { color: #2563eb; }
+</style></head><body>
+<div class="container">
+  <div class="popup-frame">
+    <h1>⚡ SelectTools</h1>
+    <p>Select text on any page, right-click to access powerful text utilities instantly.</p>
+    <div class="how">
+      <div class="step"><div class="num">1</div><div><strong>Select</strong> any text on a page</div></div>
+      <div class="step"><div class="num">2</div><div><strong>Right-click</strong> → SelectTools → choose tool</div></div>
+      <div class="step"><div class="num">3</div><div>Result appears in a popup. Click <strong>Copy</strong>.</div></div>
+    </div>
+    <div class="features">
+      <div style="margin-bottom:6px; font-weight:600;">Available Tools</div>
+      <span>Char Count</span><span>Word Count</span><span>UPPER</span><span>lower</span><span>camelCase</span><span>snake_case</span><span>kebab-case</span><span>Base64</span><span>URL Encode</span><span>MD5</span><span>SHA-1</span><span>SHA-256</span><span>JSON Format</span><span>Sort Lines</span>
+    </div>
+  </div>
+  <div class="demo-area">
+    <h2>→ テキスト選択 → 右クリック → 即変換</h2>
+    <div class="demo-webpage">
+      <p>The quick brown fox jumps over the lazy dog. This is a sample text for demonstration: <span class="selected">Hello World 2026</span></p>
+      <div class="context-menu">
+        <div class="item">Cut</div>
+        <div class="item">Copy</div>
+        <div class="sep"></div>
+        <div class="submenu-label">⚡ SelectTools <span>▶</span></div>
+        <div class="sep"></div>
+        <div class="item">Paste</div>
+        <div class="submenu">
+          <div class="item">📊 Char Count</div>
+          <div class="item highlight">🔠 UPPER CASE</div>
+          <div class="item">🔡 lower case</div>
+          <div class="sep"></div>
+          <div class="item">🔐 Base64 Encode</div>
+          <div class="item">🔗 URL Encode</div>
+          <div class="sep"></div>
+          <div class="item">#️⃣ SHA-256</div>
+        </div>
+      </div>
+    </div>
+    <div class="result-cards">
+      <div class="result-card"><div class="label">UPPER CASE</div><div class="value blue">HELLO WORLD 2026</div></div>
+      <div class="result-card"><div class="label">Base64</div><div class="value">SGVsbG8gV29ybGQgMjAyNg==</div></div>
+      <div class="result-card"><div class="label">URL Encode</div><div class="value">Hello%20World%202026</div></div>
+      <div class="result-card"><div class="label">SHA-256</div><div class="value">a3f2b8c1d4...</div></div>
+    </div>
+  </div>
+</div>
+</body></html>

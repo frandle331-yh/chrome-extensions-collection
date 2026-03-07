@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <h1>ResponsePeek</h1>
+    <button id="copy-all" title="Copy All Headers">Copy</button>
+  </div>
+  <div id="loading">Loading headers...</div>
+  <div id="content" style="display:none">
+    <div id="status-bar" class="status-bar"></div>
+    <div id="security" class="section"></div>
+    <div id="caching" class="section"></div>
+    <div id="all-headers" class="section"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

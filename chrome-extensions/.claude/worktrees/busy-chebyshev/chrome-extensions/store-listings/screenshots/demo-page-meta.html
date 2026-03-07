@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><title>Page Meta - Screenshot</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { width: 1280px; height: 800px; background: #f0f4f8; display: flex; align-items: center; justify-content: center; font-family: system-ui, -apple-system, sans-serif; }
+.container { display: flex; gap: 48px; align-items: flex-start; padding-top: 40px; }
+.popup-frame { background: #fff; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.15); width: 440px; max-height: 720px; overflow: hidden; }
+.header { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; background: #fff; }
+.header h1 { font-size: 16px; color: #2563eb; }
+.header button { background: none; border: 1px solid #e2e8f0; border-radius: 6px; padding: 4px 10px; font-size: 14px; cursor: pointer; }
+.section { padding: 12px 18px; border-bottom: 1px solid #e2e8f0; }
+.section-title { font-size: 12px; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px; }
+.row { display: flex; padding: 5px 0; font-size: 13px; }
+.label { width: 110px; color: #64748b; flex-shrink: 0; }
+.value { color: #0f172a; word-break: break-all; cursor: pointer; }
+.value:hover { color: #2563eb; }
+.ogp-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; margin-bottom: 8px; }
+.ogp-img { width: 100%; height: 100px; object-fit: cover; background: linear-gradient(135deg, #667eea, #764ba2); display: flex; align-items: center; justify-content: center; color: #fff; font-size: 24px; }
+.ogp-body { padding: 10px 12px; }
+.ogp-body .ogp-title { font-size: 13px; font-weight: 700; color: #0f172a; }
+.ogp-body .ogp-desc { font-size: 11px; color: #64748b; margin-top: 4px; }
+.ogp-body .ogp-url { font-size: 10px; color: #94a3b8; margin-top: 4px; }
+.heading-item { font-size: 13px; color: #0f172a; padding: 3px 0; }
+.h2 { padding-left: 20px; }
+.h3 { padding-left: 40px; }
+.badge { display: inline-block; font-size: 10px; background: #e0e7ff; color: #4338ca; border-radius: 3px; padding: 1px 5px; margin-right: 6px; font-weight: 600; }
+.feature-panel { width: 400px; }
+.feature-panel h2 { font-size: 22px; color: #1e293b; margin-bottom: 20px; font-weight: 600; }
+.feature-item { background: #fff; border-radius: 10px; padding: 16px 20px; margin-bottom: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.feature-item h3 { font-size: 14px; color: #2563eb; margin-bottom: 4px; }
+.feature-item p { font-size: 12px; color: #64748b; line-height: 1.5; }
+</style></head><body>
+<div class="container">
+  <div class="popup-frame">
+    <div class="header"><h1>PageMeta</h1><button>↻</button></div>
+    <div class="section">
+      <div class="section-title">Basic Info</div>
+      <div class="row"><div class="label">Title</div><div class="value">Visual Studio Code - Code Editing. Redefined</div></div>
+      <div class="row"><div class="label">Description</div><div class="value">Visual Studio Code is a code editor redefined and optimized for building...</div></div>
+      <div class="row"><div class="label">URL</div><div class="value">https://code.visualstudio.com/</div></div>
+      <div class="row"><div class="label">Charset</div><div class="value">UTF-8</div></div>
+      <div class="row"><div class="label">Language</div><div class="value">en</div></div>
+    </div>
+    <div class="section">
+      <div class="section-title">Open Graph (OGP)</div>
+      <div class="ogp-card">
+        <div class="ogp-img">🖥️ VS Code</div>
+        <div class="ogp-body">
+          <div class="ogp-title">Visual Studio Code - Code Editing. Redefined</div>
+          <div class="ogp-desc">Visual Studio Code is a code editor redefined and optimized for building and debugging modern web applications.</div>
+          <div class="ogp-url">code.visualstudio.com</div>
+        </div>
+      </div>
+      <div class="row"><div class="label">og:type</div><div class="value">website</div></div>
+      <div class="row"><div class="label">og:site_name</div><div class="value">Visual Studio Code</div></div>
+    </div>
+    <div class="section">
+      <div class="section-title">Headings</div>
+      <div class="heading-item"><span class="badge">H1</span>Visual Studio Code</div>
+      <div class="heading-item h2"><span class="badge">H2</span>Code Editing. Redefined.</div>
+      <div class="heading-item h2"><span class="badge">H2</span>Meet IntelliSense</div>
+      <div class="heading-item h3"><span class="badge">H3</span>Built-in Git Commands</div>
+      <div class="heading-item h2"><span class="badge">H2</span>Extensions</div>
+    </div>
+  </div>
+  <div class="feature-panel">
+    <h2>ページのメタ情報を<br>ワンクリックで確認</h2>
+    <div class="feature-item"><h3>📊 OGP Preview</h3><p>SNSシェア時の表示をプレビュー。og:image, og:title, og:description を一目で確認。</p></div>
+    <div class="feature-item"><h3>🏗️ Heading Structure</h3><p>H1〜H6の見出し階層を可視化。SEOチェックに最適。</p></div>
+    <div class="feature-item"><h3>📋 Click to Copy</h3><p>どの値もクリックでコピー。開発中の確認作業を効率化。</p></div>
+  </div>
+</div>
+</body></html>
