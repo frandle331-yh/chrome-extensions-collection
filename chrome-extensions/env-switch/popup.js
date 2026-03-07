@@ -3,6 +3,17 @@ const ENV_COLORS = [
   "#8b5cf6", "#ec4899", "#14b8a6", "#f97316",
 ];
 
+// Free tier limits
+const FREE_LIMITS = {
+  maxProjects: 2,
+  maxEnvsPerProject: 3,
+  maxHeaders: 0, // Headers are Pro only
+  importExport: false,
+};
+
+// Pro status (will be managed by ExtensionPay when configured)
+let isPro = false;
+
 let data = { projects: [], activeEnvByProject: {} };
 let editingProject = null;
 let editingEnv = null;
@@ -194,7 +205,13 @@ function renderHeaderList() {
 // === EVENT LISTENERS ===
 
 // Main view
-document.getElementById("add-project").addEventListener("click", () => openProjectEditor(null));
+document.getElementById("add-project").addEventListener("click", () => {
+  if (!isPro && data.projects.length >= FREE_LIMITS.maxProjects) {
+    showToast(`Free: max ${FREE_LIMITS.maxProjects} projects. Upgrade to Pro!`);
+    return;
+  }
+  openProjectEditor(null);
+});
 document.getElementById("add-first").addEventListener("click", () => openProjectEditor(null));
 
 // Project editor
@@ -220,7 +237,13 @@ document.getElementById("save-project").addEventListener("click", async () => {
   showToast("Project saved");
 });
 
-document.getElementById("add-env").addEventListener("click", () => openEnvEditor(null));
+document.getElementById("add-env").addEventListener("click", () => {
+  if (!isPro && editingProject.environments.length >= FREE_LIMITS.maxEnvsPerProject) {
+    showToast(`Free: max ${FREE_LIMITS.maxEnvsPerProject} environments. Upgrade to Pro!`);
+    return;
+  }
+  openEnvEditor(null);
+});
 
 document.getElementById("delete-project").addEventListener("click", async () => {
   data.projects = data.projects.filter((p) => p.id !== editingProject.id);
@@ -259,6 +282,10 @@ document.getElementById("save-env").addEventListener("click", () => {
 });
 
 document.getElementById("add-header").addEventListener("click", () => {
+  if (!isPro) {
+    showToast("Custom headers are a Pro feature. Upgrade!");
+    return;
+  }
   editingEnv.headers = editingEnv.headers || [];
   editingEnv.headers.push({ name: "", value: "" });
   renderHeaderList();
@@ -274,6 +301,7 @@ document.getElementById("delete-env").addEventListener("click", () => {
 
 // Import/Export
 document.getElementById("export-btn").addEventListener("click", async () => {
+  if (!isPro) { showToast("Export is a Pro feature. Upgrade!"); return; }
   const json = JSON.stringify(data.projects, null, 2);
   const blob = new Blob([json], { type: "application/json" });
   const url = URL.createObjectURL(blob);
@@ -286,6 +314,7 @@ document.getElementById("export-btn").addEventListener("click", async () => {
 });
 
 document.getElementById("import-btn").addEventListener("click", () => {
+  if (!isPro) { showToast("Import is a Pro feature. Upgrade!"); return; }
   const input = document.createElement("input");
   input.type = "file";
   input.accept = ".json";

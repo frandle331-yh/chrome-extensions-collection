@@ -1,6 +1,13 @@
 let snapshots = [];
 let compareData = null;
 
+// Free tier limits
+const FREE_LIMITS = {
+  maxSnapshots: 3,
+  compareModes: ["diff"], // "side" and "slider" are Pro
+};
+let isPro = false;
+
 async function loadSnapshots() {
   const result = await chrome.storage.local.get("snapdiff");
   snapshots = (result.snapdiff || {}).snapshots || [];
@@ -63,6 +70,11 @@ function renderSnapshots() {
 
 // === CAPTURE ===
 document.getElementById("capture").addEventListener("click", async () => {
+  if (!isPro && snapshots.length >= FREE_LIMITS.maxSnapshots) {
+    showToast(`Free: max ${FREE_LIMITS.maxSnapshots} snapshots. Upgrade to Pro!`);
+    return;
+  }
+
   try {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
     const dataUrl = await chrome.tabs.captureVisibleTab(null, { format: "png" });
@@ -74,8 +86,8 @@ document.getElementById("capture").addEventListener("click", async () => {
       timestamp: Date.now(),
     });
 
-    // Limit to 20 snapshots to manage storage
-    if (snapshots.length > 20) snapshots = snapshots.slice(0, 20);
+    const maxSnaps = isPro ? 50 : FREE_LIMITS.maxSnapshots;
+    if (snapshots.length > maxSnaps) snapshots = snapshots.slice(0, maxSnaps);
 
     await saveSnapshots();
     renderSnapshots();
@@ -252,7 +264,13 @@ function loadImage(src) {
 
 // Compare mode change
 document.getElementById("compare-mode").addEventListener("change", (e) => {
-  renderCompare(e.target.value);
+  const mode = e.target.value;
+  if (!isPro && !FREE_LIMITS.compareModes.includes(mode)) {
+    showToast(`${mode === "side" ? "Side by Side" : "Slider"} is a Pro feature!`);
+    e.target.value = "diff";
+    return;
+  }
+  renderCompare(mode);
 });
 
 document.getElementById("compare-back").addEventListener("click", () => {
