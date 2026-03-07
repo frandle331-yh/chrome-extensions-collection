@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "RegexPlayground - Live Regex Tester",
+  "version": "1.0.0",
+  "description": "Test regular expressions in real-time with live matching, group highlighting, and a cheat sheet. Works offline.",
+  "permissions": [],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "RegexPlayground"
+  },
+  "icons": {}
+}

@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "ResponsePeek - HTTP Header Viewer",
+  "version": "1.0.0",
+  "description": "Instantly view HTTP response headers, security headers, caching info, and server details for any page. Essential for web developers.",
+  "permissions": ["activeTab", "scripting", "webRequest"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "ResponsePeek"
+  },
+  "icons": {}
+}
