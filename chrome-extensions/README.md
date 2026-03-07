@@ -54,8 +54,3 @@ Visit each extension's page on the [Chrome Web Store](https://chromewebstore.goo
 - **Vanilla JavaScript** — no frameworks, lightweight and fast / フレームワーク不使用で軽量
 - **Chrome APIs** — contextMenus, activeTab, scripting, tabs, storage, declarativeNetRequest
 
----
-
-## License
-
-MIT
