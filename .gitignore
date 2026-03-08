@@ -10,24 +10,27 @@ collab.sh
 CLAUDE.md
 
 # Store & monetization strategy
-chrome-extensions/store-listings/revenue-strategy.md
-chrome-extensions/store-listings/screenshots/
-chrome-extensions/store-listings/*.txt
-chrome-extensions/store-listings/articles/
+store-listings/revenue-strategy.md
+store-listings/screenshots/
+store-listings/*.txt
+store-listings/articles/
 
 # Paid extension build scripts
-chrome-extensions/*-paid.py
-chrome-extensions/setup-icons-paid.py
-chrome-extensions/create-zips-paid.py
+*-paid.py
+setup-icons-paid.py
+create-zips-paid.py
 
 # Extension packages
-chrome-extensions/zips/
+zips/
 
 # ExtensionPay payment library
-chrome-extensions/*/ExtPay.js
+*/ExtPay.js
 
 # DevToolBox (separate project)
 devtoolbox/
+
+# Legacy directory (removed)
+chrome-extensions/
 
 # Claude worktrees
 .claude/
