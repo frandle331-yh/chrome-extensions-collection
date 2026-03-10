@@ -5,8 +5,7 @@
   "description": "Capture page screenshots and compare them to spot visual changes. Pixel-level diff with highlighting. No cloud needed.",
   "permissions": [
     "activeTab",
-    "storage",
-    "tabs"
+    "storage"
   ],
   "background": {
     "service_worker": "background.js"

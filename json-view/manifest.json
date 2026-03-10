@@ -3,7 +3,7 @@
   "name": "JSONView - Beautiful JSON Formatter",
   "version": "1.0.0",
   "description": "Auto-format and beautify JSON responses in your browser. Collapsible tree view, syntax highlighting, search, and copy support.",
-  "permissions": ["activeTab"],
+  "permissions": [],
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
