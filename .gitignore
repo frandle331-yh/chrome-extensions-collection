@@ -4,33 +4,17 @@ node_modules/
 .DS_Store
 Thumbs.db
 
-# Internal collaboration (multi-agent)
-.collab/
-collab.sh
+# Agent governance (not public)
 CLAUDE.md
 
-# Store & monetization strategy
-store-listings/revenue-strategy.md
-store-listings/screenshots/
-store-listings/*.txt
-store-listings/articles/
-
-# Paid extension build scripts
-*-paid.py
-setup-icons-paid.py
-create-zips-paid.py
-
-# Extension packages
+# Extension packages (build artifacts)
 zips/
 
-# ExtensionPay payment library
-*/ExtPay.js
+# ExtensionPay payment library (per-extension)
+*/src/ExtPay.js
 
-# DevToolBox (separate project)
-devtoolbox/
-
-# Legacy directory (removed)
+# Legacy (pending deletion)
 chrome-extensions/
 
-# Claude worktrees
+# Claude worktrees & config
 .claude/
